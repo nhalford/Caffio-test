@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F566A9FD1993231400131DC3 /* Allana Rivera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F566A9F81993231400131DC3 /* Allana Rivera.jpg */; };
+		F566A9FE1993231400131DC3 /* Before I die.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F566A9F91993231400131DC3 /* Before I die.jpg */; };
+		F566A9FF1993231400131DC3 /* Charlie Andrews.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F566A9FA1993231400131DC3 /* Charlie Andrews.jpg */; };
+		F566AA001993231400131DC3 /* Donde esta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F566A9FB1993231400131DC3 /* Donde esta.jpg */; };
+		F566AA011993231400131DC3 /* Six word.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F566A9FC1993231400131DC3 /* Six word.jpg */; };
+		F586F32B1991E26B009A61E2 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F586F32A1991E26B009A61E2 /* CardView.xib */; };
 		F5B779DA19906FA60084D763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B779D919906FA60084D763 /* AppDelegate.swift */; };
 		F5B779DC19906FA60084D763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B779DB19906FA60084D763 /* ViewController.swift */; };
 		F5B779DF19906FA60084D763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B779DD19906FA60084D763 /* Main.storyboard */; };
 		F5B779E119906FA60084D763 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B779E019906FA60084D763 /* Images.xcassets */; };
 		F5B779ED19906FA60084D763 /* Caffio_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B779EC19906FA60084D763 /* Caffio_testTests.swift */; };
+		F5B779F7199072B60084D763 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B779F6199072B60084D763 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F566A9F81993231400131DC3 /* Allana Rivera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Allana Rivera.jpg"; sourceTree = "<group>"; };
+		F566A9F91993231400131DC3 /* Before I die.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Before I die.jpg"; sourceTree = "<group>"; };
+		F566A9FA1993231400131DC3 /* Charlie Andrews.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Charlie Andrews.jpg"; sourceTree = "<group>"; };
+		F566A9FB1993231400131DC3 /* Donde esta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Donde esta.jpg"; sourceTree = "<group>"; };
+		F566A9FC1993231400131DC3 /* Six word.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Six word.jpg"; sourceTree = "<group>"; };
+		F586F32A1991E26B009A61E2 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		F5B779D419906FA60084D763 /* Caffio-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caffio-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B779D819906FA60084D763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5B779D919906FA60084D763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +47,7 @@
 		F5B779E619906FA60084D763 /* Caffio-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Caffio-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B779EB19906FA60084D763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5B779EC19906FA60084D763 /* Caffio_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffio_testTests.swift; sourceTree = "<group>"; };
+		F5B779F6199072B60084D763 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F56C9CF91990962800C72D08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F56C9CFA1990962D00C72D08 /* images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F56C9CFA1990962D00C72D08 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F566A9F81993231400131DC3 /* Allana Rivera.jpg */,
+				F566A9F91993231400131DC3 /* Before I die.jpg */,
+				F566A9FA1993231400131DC3 /* Charlie Andrews.jpg */,
+				F566A9FB1993231400131DC3 /* Donde esta.jpg */,
+				F566A9FC1993231400131DC3 /* Six word.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F5B779CB19906FA60084D763 = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +109,12 @@
 		F5B779D619906FA60084D763 /* Caffio-test */ = {
 			isa = PBXGroup;
 			children = (
+				F56C9CF91990962800C72D08 /* Resources */,
 				F5B779D919906FA60084D763 /* AppDelegate.swift */,
 				F5B779DB19906FA60084D763 /* ViewController.swift */,
 				F5B779DD19906FA60084D763 /* Main.storyboard */,
+				F5B779F6199072B60084D763 /* CardView.swift */,
+				F586F32A1991E26B009A61E2 /* CardView.xib */,
 				F5B779E019906FA60084D763 /* Images.xcassets */,
 				F5B779D719906FA60084D763 /* Supporting Files */,
 			);
@@ -190,7 +227,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B779DF19906FA60084D763 /* Main.storyboard in Resources */,
+				F566A9FF1993231400131DC3 /* Charlie Andrews.jpg in Resources */,
+				F566A9FE1993231400131DC3 /* Before I die.jpg in Resources */,
 				F5B779E119906FA60084D763 /* Images.xcassets in Resources */,
+				F566AA001993231400131DC3 /* Donde esta.jpg in Resources */,
+				F586F32B1991E26B009A61E2 /* CardView.xib in Resources */,
+				F566AA011993231400131DC3 /* Six word.jpg in Resources */,
+				F566A9FD1993231400131DC3 /* Allana Rivera.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B779DC19906FA60084D763 /* ViewController.swift in Sources */,
+				F5B779F7199072B60084D763 /* CardView.swift in Sources */,
 				F5B779DA19906FA60084D763 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +439,7 @@
 				F5B779F219906FA60084D763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5B779F319906FA60084D763 /* Build configuration list for PBXNativeTarget "Caffio-testTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +448,7 @@
 				F5B779F519906FA60084D763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
