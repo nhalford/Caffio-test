@@ -10,21 +10,21 @@ import UIKit
 
 class CardView: UIView {
     
-    var fullPhoto: Bool?
-    var photo: UIImage?
-    var authorPhoto: UIImage?
+    var fullPhoto: Bool!
+    var photo: UIImage!
+    var authorPhoto: UIImage!
     
-    @IBOutlet var categoryLabel: UILabel?
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var labelsView: UIView?
-    @IBOutlet var subtitleLabel: UILabel?
-    @IBOutlet var authorLabel: UILabel?
-    @IBOutlet var authorPhotoView: UIImageView?
-    @IBOutlet var dateLabel: UILabel?
-    @IBOutlet var fullImageView: UIImageView?
-    @IBOutlet var upperImageView: UIImageView?
+    @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var labelsView: UIView!
+    @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var authorPhotoView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var fullImageView: UIImageView!
+    @IBOutlet var upperImageView: UIImageView!
     
-    var date: NSDate?
+    var date: NSDate!
     convenience init(frame: CGRect, image: UIImage, fullPhoto: Bool, category: String, title: String, subtitle: String, author: String, authorPhoto: UIImage, date: NSDate) {
         self.init(frame: frame)
         
@@ -38,29 +38,31 @@ class CardView: UIView {
         var categoryText = NSMutableAttributedString(string: category.uppercaseString)
         let categoryLength = countElements(category)
         let range = NSRange(location: 0, length: categoryLength)
-        categoryText.addAttribute(String(NSUnderlineStyleAttributeName), value: NSUnderlineStyle.StyleSingle.toRaw(), range: range)
+        categoryText.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.toRaw(), range: range)
         
-        self.categoryLabel!.attributedText = categoryText
-        self.titleLabel!.text = title
-        self.subtitleLabel!.text = subtitle
+        self.categoryLabel.attributedText = categoryText
+        self.titleLabel.text = title
+        self.subtitleLabel.text = subtitle
         
         let authorText = NSAttributedString(string: author)
-        self.authorLabel!.attributedText = authorText
+        self.authorLabel.attributedText = authorText
         
         self.authorPhoto = authorPhoto
-        self.authorPhotoView!.image = authorPhoto
-        self.authorPhotoView!.contentMode = .ScaleAspectFit
-        self.authorPhotoView!.layer.cornerRadius = authorPhotoView!.frame.size.height / 2
-        self.authorPhotoView!.layer.masksToBounds = true
-        self.authorPhotoView!.layer.borderWidth = 0
+        self.authorPhotoView.image = authorPhoto
+        self.authorPhotoView.contentMode = .ScaleAspectFit
+        self.authorPhotoView.layer.cornerRadius = authorPhotoView.frame.size.height / 2
+        self.authorPhotoView.layer.masksToBounds = true
+        self.authorPhotoView.layer.borderWidth = 0
         
         self.date = date
         self.dateLabel!.textColor = .lightGrayColor()
         
-        var dayComponent = NSCalendar.currentCalendar().components(NSCalendarUnit.CalendarUnitDay, fromDate: date)
-        let days = dayComponent.day
+        let dayComponent = NSCalendar.currentCalendar().components(NSCalendarUnit.CalendarUnitDay, fromDate: date)
+        let dayCount = NSCalendar.currentCalendar().components(.CalendarUnitDay, fromDate: date, toDate: NSDate(), options: nil)
+        let days = dayCount.day
+        
         var dateString = dateStringFromDays(days)
-        if !dateString {
+        if dateString == nil {
             var dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "LLLL d"
             dateString = dateFormatter.stringFromDate(date)
@@ -96,17 +98,20 @@ class CardView: UIView {
     }
     
     func dateStringFromDays(days: Int) -> String? {
+        println("\(days) days")
         switch days {
-        case (days == 0):
+        case 0:
             return "today"
-        case (days == 1):
+        case 1:
             return "1 day ago"
-        case (days < 7):
+        case 2..<7:
             return "\(days) days ago"
-        case (days < 14):
+        case 7..<14:
             return "last week"
-        case (days < 21):
-            return "two weeks ago"
+        case 14..<21:
+            return "2 weeks ago"
+        case 21..<28:
+            return "3 weeks ago"
         default:
             return nil
         }

@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         var rect = CGRectMake(0, 0, CGFloat(self.view.bounds.width)-20, cardHeight)
         
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "LLLL d"
+        dateFormatter.dateFormat = "LLLL d yyyy"
         
-        let firstDate = dateFormatter.dateFromString("August 1")
-        let secondDate = dateFormatter.dateFromString("July 25")
-        let thirdDate = dateFormatter.dateFromString("July 2")
+        let firstDate = dateFormatter.dateFromString("August 1 2014")
+        let secondDate = dateFormatter.dateFromString("July 25 2014")
+        let thirdDate = dateFormatter.dateFromString("July 2 2014")
         
         // create cards
         var firstCard = CardView(frame: rect, image: UIImage(named: "Before I die.jpg"), fullPhoto: false, category: "Music", title: "Before I die I want to see these men sing", subtitle: "Because I've literally heard nothing more beautiful", author: "Allana Rivera", authorPhoto: UIImage(named:"Allana Rivera.jpg"), date: firstDate)
