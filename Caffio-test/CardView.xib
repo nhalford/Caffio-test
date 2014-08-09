@@ -35,16 +35,30 @@
                         <constraint firstAttribute="width" constant="300" id="WWz-gh-LzR"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="266" translatesAutoresizingMaskIntoConstraints="NO" id="1yY-8v-cbl">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="266" translatesAutoresizingMaskIntoConstraints="NO" id="1yY-8v-cbl">
                     <rect key="frame" x="16" y="200" width="266" height="21"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="13" name="ProximaNova-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-Nn-ZFg">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="268" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-Nn-ZFg">
                     <rect key="frame" x="16" y="168" width="268" height="30"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="18" name="ProximaNova-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjR-c7-tQZ">
@@ -53,17 +67,24 @@
                         <fragment content="Label">
                             <attributes>
                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="14" name="Helvetica"/>
+                                <font key="NSFont" size="14" name="ProximaNova-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-UM-MxH">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-UM-MxH">
                     <rect key="frame" x="16" y="261" width="173" height="21"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="13" name="ProximaNova-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csF-LU-yJf">
@@ -72,29 +93,39 @@
                         <fragment content="Label">
                             <attributes>
                                 <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="13" name="Helvetica"/>
+                                <font key="NSFont" size="13" name="ProximaNova-Regular"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6T-ng-l2C">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6T-ng-l2C">
                     <rect key="frame" x="207" y="255" width="27" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="hTj-xe-P6n"/>
                         <constraint firstAttribute="width" secondItem="i6T-ng-l2C" secondAttribute="height" multiplier="1:1" id="tbR-w4-3vi"/>
                         <constraint firstAttribute="height" constant="24" id="z4x-2w-kGa"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hTj-xe-P6n"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="HFV-Nn-ZFg" secondAttribute="trailing" constant="16" id="15m-mK-FtD"/>
+                <constraint firstItem="HFV-Nn-ZFg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="39B-Uc-dzf"/>
+                <constraint firstAttribute="bottom" secondItem="csF-LU-yJf" secondAttribute="bottom" constant="11" id="3kZ-Rj-qoG"/>
                 <constraint firstAttribute="trailing" secondItem="csF-LU-yJf" secondAttribute="trailing" constant="8" id="BTz-NQ-zIo"/>
                 <constraint firstAttribute="trailing" secondItem="XcR-Or-sf6" secondAttribute="trailing" id="HMh-d9-zVz"/>
                 <constraint firstItem="ad0-Jp-hl6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IOl-nh-a6X"/>
                 <constraint firstItem="csF-LU-yJf" firstAttribute="leading" secondItem="i6T-ng-l2C" secondAttribute="trailing" constant="5" id="IiA-Ek-v7Q"/>
                 <constraint firstItem="ad0-Jp-hl6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LbZ-Pw-Pxf"/>
+                <constraint firstItem="HFV-Nn-ZFg" firstAttribute="top" secondItem="XcR-Or-sf6" secondAttribute="bottom" constant="8" id="MdA-BC-FRe"/>
+                <constraint firstItem="rRP-UM-MxH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Na5-Eo-Lib"/>
                 <constraint firstItem="1yY-8v-cbl" firstAttribute="top" secondItem="HFV-Nn-ZFg" secondAttribute="bottom" constant="7" id="Par-p4-v0B"/>
                 <constraint firstAttribute="trailing" secondItem="1yY-8v-cbl" secondAttribute="trailing" constant="17" id="SaC-sh-cwo"/>
                 <constraint firstAttribute="trailing" secondItem="ad0-Jp-hl6" secondAttribute="trailing" id="WfS-lJ-n1P"/>
@@ -104,6 +135,7 @@
                 <constraint firstItem="i6T-ng-l2C" firstAttribute="leading" secondItem="rRP-UM-MxH" secondAttribute="trailing" constant="18" id="jTO-xT-GpP"/>
                 <constraint firstItem="XcR-Or-sf6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jY2-9e-SjV"/>
                 <constraint firstAttribute="bottom" secondItem="i6T-ng-l2C" secondAttribute="bottom" constant="10" id="neq-kk-4H6"/>
+                <constraint firstAttribute="bottom" secondItem="rRP-UM-MxH" secondAttribute="bottom" constant="10" id="xaE-RM-cRI"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -9,25 +9,49 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIPageViewControllerDataSource {
                             
     var window: UIWindow?
-
+    var pageViewController: UIPageViewController!
+    var viewControllers: NSArray!
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
-        var mainViewController: ViewController = ViewController()
-        
-        var navController = UINavigationController(rootViewController: mainViewController)
         
         if let window = self.window {
-            window.rootViewController = navController
+            let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+            
+            let yellowView = UIScrollView(frame: window.frame)
+            yellowView.backgroundColor = .yellowColor()
+            let yellowViewController = UIViewController()
+            yellowViewController.view = yellowView
+            
+            let redView = UIScrollView(frame: window.frame)
+            redView.backgroundColor = .redColor()
+            let redViewController = UIViewController()
+            redViewController.view = redView
+           
+            let mainViewController = ViewController()
+            
+            viewControllers = [yellowViewController, mainViewController, redViewController]
+            mainViewController.viewControllers = viewControllers
+            mainViewController.pageViewController = pageViewController
+            
+            pageViewController.dataSource = self
+            
+            pageViewController.setViewControllers([mainViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+            
+            let menuBarView = UIView(frame: CGRect(x: 0, y: 0, width: window.frame.width, height: 20))
+            menuBarView.backgroundColor = .whiteColor()
+            pageViewController.view.addSubview(menuBarView)
+
+            window.rootViewController = pageViewController
             window.setNeedsDisplay()
         }
         
         return true
     }
-
+    
     func applicationWillResignActive(application: UIApplication!) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -49,7 +73,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    func pageViewController(pageViewController: UIPageViewController!, viewControllerAfterViewController viewController: UIViewController!) -> UIViewController! {
+        var i = viewControllers.indexOfObject(viewController)
+        if (i < viewControllers.count - 1) {
+            return viewControllers.objectAtIndex(i+1) as UIViewController!
+        }
+        return nil
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController!, viewControllerBeforeViewController viewController: UIViewController!) -> UIViewController! {
+        var i = viewControllers.indexOfObject(viewController)
+        if (i > 0) {
+            return viewControllers.objectAtIndex(i-1) as UIViewController!
+        }
+        return nil
+    }
+ 
+    
 }
 

@@ -34,17 +34,33 @@ class CardView: UIView {
         
         self.fullPhoto = fullPhoto
         
+        let proximaNova13 = UIFont(name: "ProximaNova-Regular", size: 13)
+        let proximaNova14 = UIFont(name: "ProximaNova-Regular", size: 14)
+        let proximaNova18 = UIFont(name: "ProximaNova-Regular", size: 18)
         
         var categoryText = NSMutableAttributedString(string: category.uppercaseString)
         let categoryLength = countElements(category)
-        let range = NSRange(location: 0, length: categoryLength)
-        categoryText.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.toRaw(), range: range)
-        
+        let categoryRange = NSRange(location: 0, length: categoryLength)
+        categoryText.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.toRaw(), range: categoryRange)
+        categoryText.addAttribute(NSFontAttributeName, value: proximaNova14, range: categoryRange)
         self.categoryLabel.attributedText = categoryText
-        self.titleLabel.text = title
-        self.subtitleLabel.text = subtitle
         
-        let authorText = NSAttributedString(string: author)
+        var titleText = NSMutableAttributedString(string: title)
+        let titleLength = countElements(title)
+        let titleRange = NSRange(location: 0, length: titleLength)
+        titleText.addAttribute(NSFontAttributeName, value: proximaNova18, range: titleRange)
+        self.titleLabel.attributedText = titleText
+        
+        var subtitleText = NSMutableAttributedString(string: subtitle)
+        let subtitleLength = countElements(subtitle)
+        let subtitleRange = NSRange(location: 0, length: subtitleLength)
+        subtitleText.addAttribute(NSFontAttributeName, value: proximaNova14, range: subtitleRange)
+        self.subtitleLabel.attributedText = subtitleText
+        
+        var authorText = NSMutableAttributedString(string: author)
+        let authorLength = countElements(author)
+        let authorRange = NSRange(location: 0, length: authorLength)
+        authorText.addAttribute(NSFontAttributeName, value: proximaNova13, range: authorRange)
         self.authorLabel.attributedText = authorText
         
         self.authorPhoto = authorPhoto
@@ -68,8 +84,11 @@ class CardView: UIView {
             dateString = dateFormatter.stringFromDate(date)
         }
         
-        self.dateLabel!.text = dateString!.uppercaseString
-        
+        var dateText = NSMutableAttributedString(string: dateString!.uppercaseString)
+        let dateLength = countElements(dateString!)
+        let dateRange = NSRange(location: 0, length: dateLength)
+        dateText.addAttribute(NSFontAttributeName, value: proximaNova13, range: dateRange)
+        self.dateLabel.attributedText = dateText
         
         // does the photo take up the full card or part of the card?
         if fullPhoto {
@@ -98,7 +117,6 @@ class CardView: UIView {
     }
     
     func dateStringFromDays(days: Int) -> String? {
-        println("\(days) days")
         switch days {
         case 0:
             return "today"
